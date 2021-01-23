@@ -142,10 +142,11 @@ class SignUp extends Component {
                         <Form.Group controlId="formBasicCheckbox">
                             <Form.Check type="radio" className = "labelBox" label="Connect account with Covid Testing*" />
                         </Form.Group>
-                        <Button variant="primary" className = "signup-btn" type="submit">
-                            Submit!
-                        </Button>
+                        
                     </Form>
+                    <Button variant="primary" onClick={this.signUpClick} className = "signup-btn">
+                        Submit!
+                    </Button>
 
                     
                 </div>
