@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SafeSeat</title>
+
+
+  <style>
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+
+</head>
+
+<body>
+
+  <h1>Welcome to SafeSeat</h1> 
+  <h2>Kindly Sign up/ Sign in to Continue: </h2>
+  <div class = "dropdown">
+  <button onclick="myFunction()" class= "dropBtn"> Sign in </button>
+  <div id = "myDropdown" class = "dropdown-content">
+  	<a href ="#inProfessor"> Sign in as Professor</a>
+  	<a href ="#inStudent"> Sign in as Student</a>
+  </div>
+</div>
+
+  <div class = "dropdown">
+  <button onclick="myFunction2()" class= "dropBtn"> Sign up </button>
+  <div id = "myDropdown2" class = "dropdown-content">
+  	<a href ="#upProfessor"> Sign up as Professor</a>
+  	<a href ="#upStudent"> Sign up as Student</a>
+  </div>
+</div>
+
+
+
+<script>
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+</script>
+
+</body>
+
+</html> 
