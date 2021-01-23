@@ -9,7 +9,7 @@ import CreateClass from './components/CreateClass';
 function App() {
   return (
     <div className="App">
-      <Main />
+      <Login />
     </div>
   );
 }

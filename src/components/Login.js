@@ -96,10 +96,11 @@ class Login extends Component {
                         <Form.Check type="radio" className = "labelBox1" label="Student" />
                          <Form.Check type="radio" className = "labelBox1" label="Professor" />
                     </Form.Group>
-                    <Button variant="primary"  onClick={this.signInClick}  className = "signup-btn" type="submit">
-                        Submit!
-                    </Button>
+                    
                 </Form>
+                <Button variant="primary"  onClick={this.signInClick}  className = "signup-btn" type="submit">
+                    Submit!
+                </Button>
              </div>
              </div>
 
