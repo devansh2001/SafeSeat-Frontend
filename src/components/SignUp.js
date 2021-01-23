@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
-class Login extends Component {
+
+class SignUp extends Component {
     constructor(props) {
         super(props);
     }
 
     render() {
         return (
-            <div class = "sign-in">
-                <h1> Sign in</h1>
+            <div class = "sign-up">
+                <h1>Sign Up</h1>
                 <Form>
+                    <Form.Group controlId="formBasicEmail">
+                        <Form.Label>Name</Form.Label>
+                        <Form.Control type="text" placeholder="Name" />
+                    </Form.Group>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Email</Form.Label>
                         <Form.Control type="email" placeholder="School email" />
@@ -17,21 +22,24 @@ class Login extends Component {
                             We'll never share your email with anyone else.
                         </Form.Text>
                     </Form.Group>
-
-                    <Form.Group controlId="formBasicPassword">
+                    <Form.Group controlId="formBasicEmail">
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder="Password" />
                     </Form.Group>
+
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Confirm Passwork</Form.Label>
+                        <Form.Control type="password" placeholder="Confirm Password" />
+                    </Form.Group>
                     <Button variant="primary" type="submit">
-                        Submit
+                        Sign Up!
                     </Button>
                 </Form>
 
-                    <p>Don't have an account? <Button variant='secondary'> Sign up</Button></p>
-
+                <p>Already have an account? <Button variant='secondary'> Sign In</Button></p>
             </div>
         );
     }
 }
 
-export default Login;
+export default SignUp;
