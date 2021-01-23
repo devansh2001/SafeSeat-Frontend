@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import logo from './logo.png';
 
 
@@ -12,7 +12,7 @@ class Main extends Component {
         return (
             <div class = "main" className="mainPage">
                 <Button variant="" type="submit" className="signInBtn">
-                    Sign In
+                    SIGN IN
                 </Button>
                 <img src={logo} alt="Logo" className ="logoImage" />
                 <p className="ourMission">It’s time to go back safely to our campus and be able 
@@ -25,7 +25,6 @@ class Main extends Component {
                 <Button variant="" type="submit" className="button">
                     I am a Professor
                 </Button>
-
             </div>
         );
     }
