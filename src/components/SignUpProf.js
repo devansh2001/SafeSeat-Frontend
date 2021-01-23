@@ -9,7 +9,7 @@ class SignUp extends Component {
 
     render() {
         return (
-<div class="container"><h6><a href="/Login.js">BACK</a></h6>
+<div class="container"><h6><a href="#/index">BACK</a></h6>
 
 
             <div class = "sign-up">
@@ -32,6 +32,11 @@ class SignUp extends Component {
                     </Form.Group>
 
                     <Form.Group controlId="formBasicEmail">
+                        <Form.Label className= "label">School Name: *</Form.Label>
+                        <Form.Control type="text" className="input" placeholder="School Name" />
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicEmail">
                         <Form.Label className= "label">Email: *</Form.Label>
                         <Form.Control type="email" className="input" placeholder="School email" />
               
@@ -47,10 +52,7 @@ class SignUp extends Component {
   
                     </Form.Group>
   
-                    <Form.Group controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label = "Request ADA Access" className = "labelBox" />
-                    </Form.Group>
-
+              
                     <Form.Group controlId="formBasicCheckbox">
                         <Form.Check type="radio" className = "labelBox" label="Connect account with Covid Testing*" />
                     </Form.Group>

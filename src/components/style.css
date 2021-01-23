@@ -1,0 +1,68 @@
+.sign-up{
+
+width: 500px;
+box-shadow: 0 0 3px 0 rgba(0,0,0,0.9);
+background: #ffff;
+padding: 10px;
+margin: 8% auto 0;
+text-align: center;
+border-radius: 20px;
+border-color: black;
+}
+h3{
+	color: blue;
+}
+h6{
+	text-align: right;
+	margin: 35px;
+	font-size: 30px;
+
+}
+.input{
+
+	margin: 10px;
+	width: 60%;
+	border-radius: 20px;
+	display: inline-block;
+	float: right;
+}
+
+.label{
+	text-align: left;
+	display: inline-block;
+	margin: 10px;
+	color: blue;
+	width: 30%;
+}
+.labelBox{
+	text-align: left;
+	display: inline-block;
+	float: left;
+	clear: both;
+	margin: 5px;
+	padding: 10px;
+position: relative;
+	color: blue;
+	width: 60%;
+}
+.text-muted{
+	text-align: center;
+	display: inline;
+	float: right;
+	margin:10px;
+	padding: 5px;
+}
+
+.signup-btn{
+	border-radius: 25px;
+	color: white;
+	background-color: blue;
+	display: block;
+	width: 70%;
+	text-align: center;
+	margin-left: 15%;
+	padding: 10px;
+	box-shadow: 0 0 0 7px 0 rgba(1,1,0,0.3);
+	margin-top:  10px;
+	margin-bottom: 15px;
+}
