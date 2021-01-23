@@ -45,6 +45,12 @@ position: relative;
 	color: blue;
 	width: 60%;
 }
+.labelBox1{
+	display: inline-block;
+	padding: 12px;
+	margin: 12px;
+	color: blue;
+}
 .text-muted{
 	text-align: center;
 	display: inline;

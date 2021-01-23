@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import './style.css';
+import '../index.js';
+import './logo.png'
 
 class SignUp extends Component {
     constructor(props) {
         super(props);
     }
 
+
+
+
     render() {
         return (
-<div class="container"><h6><a href="/Login.js">BACK</a></h6>
+<div class="container">
+<a href = "#"><img src ="logo.png" alt ="logo"/></a>
+<h6><a href="../index.js">BACK</a></h6>
 
 
             <div class = "sign-up">
