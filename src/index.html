@@ -3,8 +3,6 @@
 
 <head>
   <title>SafeSeat</title>
-
-
   <style>
 .dropbtn {
   background-color: #4CAF50;
@@ -23,6 +21,8 @@
 .dropdown {
   position: relative;
   display: inline-block;
+  padding: 2px;
+  margin: 2px;
 }
 
 .dropdown-content {
@@ -45,30 +45,41 @@
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
+
+.Welcome{
+    width: 400px;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+  background: #ffff;
+  padding:20px;
+  margin: 8% auto 0;
+  text-align: center;
+}
 </style>
 
 </head>
 
 <body>
 
+<div class = "Welcome">
   <h1>Welcome to SafeSeat</h1> 
   <h2>Kindly Sign up/ Sign in to Continue: </h2>
   <div class = "dropdown">
   <button onclick="myFunction()" class= "dropBtn"> Sign in </button>
   <div id = "myDropdown" class = "dropdown-content">
-  	<a href ="#inProfessor"> Sign in as Professor</a>
-  	<a href ="#inStudent"> Sign in as Student</a>
+  	<a href ="signIn/professorSignIn.html"> Sign in as Professor</a>
+  	<a href ="signIn/studentSignIn.html"> Sign in as Student</a>
   </div>
 </div>
 
+<br>
   <div class = "dropdown">
   <button onclick="myFunction2()" class= "dropBtn"> Sign up </button>
   <div id = "myDropdown2" class = "dropdown-content">
-  	<a href ="#upProfessor"> Sign up as Professor</a>
-  	<a href ="#upStudent"> Sign up as Student</a>
+  	<a href ="signUp/professorSignUp.html"> Sign up as Professor</a>
+  	<a href ="signUp/studentSignUp.html"> Sign up as Student</a>
   </div>
 </div>
-
+</div>
 
 
 <script>
