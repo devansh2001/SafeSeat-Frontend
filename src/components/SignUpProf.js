@@ -1,22 +1,15 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import './style.css';
-import '../index.js';
-import './logo.png'
 
 class SignUp extends Component {
     constructor(props) {
         super(props);
     }
 
-
-
-
     render() {
         return (
-<div class="container">
-<a href = "#"><img src ="logo.png" alt ="logo"/></a>
-<h6><a href="../index.js">BACK</a></h6>
+<div class="container"><h6><a href="#/index">BACK</a></h6>
 
 
             <div class = "sign-up">
@@ -39,6 +32,11 @@ class SignUp extends Component {
                     </Form.Group>
 
                     <Form.Group controlId="formBasicEmail">
+                        <Form.Label className= "label">School Name: *</Form.Label>
+                        <Form.Control type="text" className="input" placeholder="School Name" />
+                    </Form.Group>
+
+                    <Form.Group controlId="formBasicEmail">
                         <Form.Label className= "label">Email: *</Form.Label>
                         <Form.Control type="email" className="input" placeholder="School email" />
               
@@ -54,10 +52,7 @@ class SignUp extends Component {
   
                     </Form.Group>
   
-                    <Form.Group controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label = "Request ADA Access" className = "labelBox" />
-                    </Form.Group>
-
+              
                     <Form.Group controlId="formBasicCheckbox">
                         <Form.Check type="radio" className = "labelBox" label="Connect account with Covid Testing*" />
                     </Form.Group>
