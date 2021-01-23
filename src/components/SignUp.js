@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import './style.css';
+import '../index.js';
+import './logo.png'
 
 class SignUp extends Component {
     constructor(props) {
@@ -87,38 +90,69 @@ class SignUp extends Component {
         })
     }
 
+
+
+
     render() {
         return (
-            <div class = "sign-up">
-                <h1>Sign Up</h1>
-                <Form>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control onChange={this.onNameChange} type="text" placeholder="Name" />
-                    </Form.Group>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control onChange={this.onEmailChange} type="email" placeholder="School email" />
-                        <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
-                        </Form.Text>
-                    </Form.Group>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control onChange={this.onPasswordChange} type="password" placeholder="Password" />
-                    </Form.Group>
+            <div class="container">
+            <a href = "#"><img src ="logo.png" alt ="logo"/></a>
+            <h6><a href="../index.js">BACK</a></h6>
 
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Confirm Passwork</Form.Label>
-                        <Form.Control onChange={this.onConfirmPasswordChange} type="password" placeholder="Confirm Password" />
-                    </Form.Group>
-                    <Button onClick={this.signUpClick} variant="primary" type="submit">
-                        Sign Up!
+
+                <div class = "sign-up">
+                    <h3>Sign Up with Safe Seat</h3>
+
+
+
+                <hr  style={{
+                    color: 'blue',
+                    backgroundColor: '#000000',
+                    height: .9,
+                    borderColor : '#000000'
+                }}/>
+
+
+                    <Form>
+                        <Form.Group controlId="formBasicEmail">
+                            <Form.Label className= "label">Name: *</Form.Label>
+                            <Form.Control onChange={this.onNameChange} type="text" className="input" placeholder="Name" />
+                        </Form.Group>
+
+                        <Form.Group controlId="formBasicEmail">
+                            <Form.Label className= "label">Email: *</Form.Label>
+                            <Form.Control onChange={this.onEmailChange} type="email" className="input" placeholder="School email" />
+                
+                        </Form.Group>
+                        <Form.Group controlId="formBasicEmail">
+                            <Form.Label className= "label">Password: *</Form.Label>
+                            <Form.Control onChange={this.onPasswordChange} type="password" className="input" placeholder="Password" />
+                        </Form.Group>
+
+                        <Form.Group controlId="formBasicPassword">
+                            <Form.Label className= "label">Confirm Password: *</Form.Label>
+                            <Form.Control type="password" onChange={this.onConfirmPasswordChange} className="input" placeholder="Confirm Password" />
+    
+                        </Form.Group>
+    
+                        <Form.Group controlId="formBasicCheckbox">
+                        <Form.Check type="checkbox" label = "Request ADA Access" className = "labelBox" />
+                        </Form.Group>
+
+                        <Form.Group controlId="formBasicCheckbox">
+                            <Form.Check type="radio" className = "labelBox" label="Connect account with Covid Testing*" />
+                        </Form.Group>
+                        
+                    </Form>
+                    <Button variant="primary" onClick={this.signUpClick} className = "signup-btn">
+                        Submit!
                     </Button>
-                </Form>
 
-                <p>Already have an account? <Button variant='secondary'> Sign In</Button></p>
-            </div>
+                    
+                </div>
+             </div>
+
+
         );
     }
 }

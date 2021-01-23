@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
@@ -23,4 +24,161 @@ code {
   padding-left: 50px;
   margin-bottom: 20px;
   margin-top: 20px;
+}
+
+/* Main Page*/
+.mainPage {
+  background: #0D1B4C;
+  width: 100%;
+  height: 100% !important;
+}
+.ourMission {  
+  font-size: 25px;
+  line-height: 35px;
+  text-align: center;
+  font-weight: 100;
+  
+  color: #FFFEFE;  
+}
+.logoImage {
+  width: 400px;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+.signInBtn {
+  position: absolute;
+  float: left;
+  margin-left: 40%;
+  margin-top: 2%;
+
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 35px;
+
+  color: #78C2C3;
+  background-color: transparent;
+  border-color: transparent;
+  text-decoration: underline;
+}
+
+.signInBtn:hover {
+  color:white;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.button {
+  width: 400px;
+  height: 75px;
+  left: 146px;
+  top: 644px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background: #FFFEFE;
+  border-radius: 50px;
+  color: #0D1B4C;
+  font-size: 30px;
+  margin: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.button:hover {
+  filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.459));
+  background: #78C2C3;
+}
+
+/* Dashboard Professor */
+.DashboardPage {
+  width: 100%;
+  padding: 2%;
+}
+
+.profID {
+  color: #0D1B4C;
+  float: right;
+  margin: 2%;
+  font-size: 25px;
+}
+
+.logOutBtn {
+  position: absolute;
+  float: right;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 35px;
+
+  color: #78C2C3;
+  background-color: transparent;
+  border-color: transparent;
+  text-decoration: underline;
+}
+
+.logOutBtn:hover {
+  color:white;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+
+/* Side Bar */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0D1B4C;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav h2 {
+  color: #FFFEFE;
+  margin-bottom: 50px;
+}
+
+.sidenav a {
+  padding: 10px 8px 10px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  background-color: rgba(196, 196, 196, 0.12);
+  border-top: #FFFEFE;
+  border-style: solid none solid none;
+  border-width: 0.5px;
+}
+
+.sidenav a:hover {
+  color: #78C2C3;
+  font-size: 25px;
+}
+
+.logo {
+  width: 200px;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+.addClass {
+  padding: 5px !important;
+  border-radius: 100%;
+  background-color: #FFFEFE !important;
+  color: #0D1B4C !important;
+  width: 70px;
+  height: 70px;
+  font-size: 35px !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+}
+
+.addClass:hover {
+  color: #78C2C3 !important;
+  width: 80px;
+  height: 80px;
+  font-size: 40px !important;
+  box-shadow: 0px 0px 8px rgba(184, 181, 181, 0.12), 0px 8px 8px rgba(170, 168, 168, 0.24);
 }
