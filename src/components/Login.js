@@ -26,9 +26,7 @@ class Login extends Component {
                         Submit
                     </Button>
                 </Form>
-
                     <p>Don't have an account? <Button variant='secondary'> Sign up</Button></p>
-
             </div>
         );
     }
