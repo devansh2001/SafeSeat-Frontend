@@ -3,11 +3,12 @@ import './App.css';
 import ClassSeatPicker from './components/ClassSeatPicker';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
+import CreateClass from './components/CreateClass';
 
 function App() {
   return (
     <div className="App">
-      <SignUp />
+      <CreateClass />
     </div>
   );
 }
