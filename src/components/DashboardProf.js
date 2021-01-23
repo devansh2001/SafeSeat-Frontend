@@ -20,18 +20,29 @@ class DashboardProf extends Component {
                     <a href="#class3">CS 1102 - A</a>
                     <a className="addClass">+</a>
                 </div>
-                <div class = "dashboard - ID">
+                <div>
                     <p className="profID">ID: 1234567890</p>
-                </div>
-                <div class = "dashboard - Log out">
                     <Button variant="" type="submit" className="logOutBtn">
                         LOG OUT
                     </Button>
                 </div>
-                
-                    <Button variant="" type="submit" className="classBtn">
-                        I am a Student
-                    </Button>
+                <div className = "dashboard">
+                    <h2>Hello John Doe,</h2>
+                    <h5>Below are the classes you are hosting in person</h5>
+                    <div href="#class1">
+                        <h5>CS 1101<br></br> SECTION A</h5>
+                        <p>10:00 am - 10:45 am <br></br> 67% Full</p>
+                    </div>
+                    <div href="#class2">
+                        <h5>CS 1101<br></br> SECTION B</h5>
+                        <p>09:00 am - 09:45 am <br></br> 100% Full</p>
+                    </div>
+                    <div href="#class3">
+                        <h5>CS 1102<br></br> SECTION A</h5>
+                        <p>12:00 am - 12:45 am <br></br> 73% Full</p>
+                    </div>
+                    <a className="addClass2">+</a>
+                </div>
             </div>
         );
     }

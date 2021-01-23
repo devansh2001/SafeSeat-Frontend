@@ -102,12 +102,11 @@ code {
 }
 
 .logOutBtn {
-  position: absolute;
   float: right;
   font-weight: 100;
   font-size: 20px;
   line-height: 35px;
-
+  margin-top: 20px; 
   color: #78C2C3;
   background-color: transparent;
   border-color: transparent;
@@ -115,11 +114,70 @@ code {
 }
 
 .logOutBtn:hover {
-  color:white;
+  color:#0D1B4C;
   background-color: transparent;
   border-color: transparent;
 }
 
+.dashboard {
+  margin-top: 10%;
+  margin-left: 250px;
+  margin-right: auto;
+}
+
+.dashboard h2 {
+  color: #0D1B4C;
+  text-align: center !important;
+  margin-bottom: 10px;
+}
+.dashboard h5 {
+  color: #3F6699;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 200;
+  margin-bottom: 40px;
+}
+
+.dashboard div {
+  border-color: #0D1B4C;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px; 
+  background: linear-gradient(180deg, rgba(120, 194, 195, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
+  box-sizing: border-box;
+  color: #3F6699;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  vertical-align: middle !important;
+  margin: 3%;
+}
+
+.dashboard div:hover {
+  text-decoration: none;
+  border-color: #78C2C3;
+}
+
+.addClass2 {
+  padding: 20px !important;
+  padding-top: 10px !important;
+  border-radius: 100%;
+  background-color: #0D1B4C !important;
+  color: #FFFEFE !important;
+  width: 70px;
+  height: 70px;
+  font-size: 35px !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+}
+
+.addClass2:hover {
+  color: #0D1B4C !important;
+  border: 1px #0D1B4C solid;
+  background-color: #FFFEFE !important;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12), 0px 8px 8px rgba(0, 0, 0, 0.24);
+}
 
 /* Side Bar */
 .sidenav {
