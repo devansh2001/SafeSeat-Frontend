@@ -13,24 +13,24 @@ import { Router, Route, browserHistory } from 'react-router';
 function App() {
   return (
     <div className="App">
-      // <Router history={browserHistory}>
-      //   <Route path='/' component={() => <Main />} />
-      //   <Route path='/main-page' component={() => <Main />} />
+      <Router history={browserHistory}>
+        <Route path='/' component={() => <Main />} />
+        <Route path='/main-page' component={() => <Main />} />
           
-      //   <Route path='/sign-up' component={() => <SignUp />} />
+        <Route path='/sign-up' component={() => <SignUp />} />
         
-      //   <Route path='/login' component={() => <Login />} />
+        <Route path='/login' component={() => <Login />} />
         
-      //   <Route path='/create-class' component={() => <CreateClass />} />
+        <Route path='/create-class' component={() => <CreateClass />} />
 
-      //   <Route path='/pick-seat' component={() => <ClassSeatPicker />} />
+        <Route path='/pick-seat' component={() => <ClassSeatPicker />} />
 
-      //   <Route path='/dashboard' component={() => <DashboardProf />} />
+        <Route path='/dashboard' component={() => <DashboardProf />} />
         
-      //   <Route path='/covid' component={() => <Covid />} />
+        <Route path='/covid' component={() => <Covid />} />
         
-      // </Router>
-      <SignUpProf />
+      </Router>
+
     </div>
   );
 }
