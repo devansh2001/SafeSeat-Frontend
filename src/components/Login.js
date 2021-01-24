@@ -40,7 +40,13 @@ class Login extends Component {
         console.log(apiResponse);
 
         if (apiResponse['password'] === password) {
-            browserHistory.push('/dashboard')
+            this.props.updateUserInfo(apiResponse);
+            console.log(apiResponse);
+            if (apiResponse['role'] === 'Student') {
+                browserHistory.push('/dashboard-student')
+            } else {
+                browserHistory.push('/dashboard-professor')
+            }
         } else {
             alert('Incorrect credentials');
         }

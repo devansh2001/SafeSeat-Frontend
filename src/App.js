@@ -7,32 +7,55 @@ import SignUp from './components/SignUp';
 import Main from './components/Main';
 import CreateClass from './components/CreateClass';
 import DashboardProf from './components/DashboardProf';
+
+import DashboardStudent from './components/DashboardStudent';
 import SignUpProf from './components/SignUpProf';
 import { Router, Route, browserHistory } from 'react-router';
+import { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <Router history={browserHistory}>
-        <Route path='/' component={() => <Main />} />
-        <Route path='/main-page' component={() => <Main />} />
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      userInfo: {}
+    }
+  }
+
+  updateUserInfo = (userInfo) => {
+    this.setState({
+      userInfo: userInfo
+    });
+    console.log("Updated:")
+    console.log(this.state.userInfo);
+  }
+
+  render() {
+    const userInfo = this.state.userInfo;
+    return (
+      <div className="App">
+        <Router history={browserHistory}>
+          <Route path='/' component={() => <Main />} />
+          <Route path='/main-page' component={() => <Main userInfo={userInfo} />} />
+            
+          <Route path='/sign-up' component={() => <SignUp userInfo={userInfo} />} />
           
-        <Route path='/sign-up' component={() => <SignUp />} />
-        
-        <Route path='/login' component={() => <Login />} />
-        
-        <Route path='/create-class' component={() => <CreateClass />} />
+          <Route path='/login' component={() => <Login updateUserInfo={this.updateUserInfo} />} />
+          
+          <Route path='/create-class' component={() => <CreateClass userInfo={userInfo} />}  />
 
-        <Route path='/pick-seat' component={() => <ClassSeatPicker />} />
+          <Route path='/pick-seat' component={() => <ClassSeatPicker userInfo={userInfo} />} />
 
-        <Route path='/dashboard' component={() => <DashboardProf />} />
-        
-        <Route path='/covid' component={() => <Covid />} />
-        
-      </Router>
+          <Route path='/dashboard-student' component={() => <DashboardStudent userInfo={this.state.userInfo} />} />
 
-    </div>
-  );
+          <Route path='/dashboard-professor' component={() => <DashboardProf userInfo={this.state.userInfo} />} />
+          
+          <Route path='/covid' component={() => <Covid userInfo={userInfo} />} />
+        </Router>
+      </div>
+    );
+  }
+
 }
 
 export default App;

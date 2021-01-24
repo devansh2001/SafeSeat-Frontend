@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Container, Form, Row, Col, Button } from 'react-bootstrap';
+
+import { browserHistory } from 'react-router';
+
 import logo from './logo.png';
+
 
 class CreateClass extends Component {
     constructor(props) {
@@ -26,7 +30,7 @@ class CreateClass extends Component {
         // make API call to get rows and cols
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-        const URL = 'http://localhost:5000/rooms/add-class/';
+        const URL = 'http://localhost:5000/rooms/add-class';
         let headers = new Headers();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Content-Type', 'application/json');
@@ -50,6 +54,8 @@ class CreateClass extends Component {
         .catch(err => console.log(err));
 
         console.log(apiResponse);
+        alert('Class added at ' + building + ' ' + room + '!');
+        browserHistory.push('/dashboard-professor');
     }
 
     updateRowsCols = async () => {
