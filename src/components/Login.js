@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import './style.css';
+import { browserHistory } from 'react-router';
 
 class Login extends Component {
     constructor(props) {
@@ -38,9 +39,9 @@ class Login extends Component {
         console.log(apiResponse);
 
         if (apiResponse['password'] === password) {
-            alert('Success');
+            browserHistory.push('/dashboard')
         } else {
-            alert('Failure');
+            alert('Incorrect credentials');
         }
     }
 
@@ -91,10 +92,6 @@ class Login extends Component {
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label className= "label">Password: *</Form.Label>
                         <Form.Control  onChange={this.onPasswordChange} type="password" className="input" placeholder="Password" />
-                    </Form.Group>
-                    <Form.Group controlId="formBasicCheckbox">
-                        <Form.Check type="radio" className = "labelBox1" label="Student" />
-                         <Form.Check type="radio" className = "labelBox1" label="Professor" />
                     </Form.Group>
                     
                 </Form>

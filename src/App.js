@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import ClassSeatPicker from './components/ClassSeatPicker';
 import Login from './components/Login';
+import Covid from './components/Covid';
 import SignUp from './components/SignUp';
 import Main from './components/Main';
 import CreateClass from './components/CreateClass';
@@ -24,6 +25,8 @@ function App() {
         <Route path='/pick-seat' component={() => <ClassSeatPicker />} />
 
         <Route path='/dashboard' component={() => <DashboardProf />} />
+        
+        <Route path='/covid' component={() => <Covid />} />
         
       </Router>
     </div>
