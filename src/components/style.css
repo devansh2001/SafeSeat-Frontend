@@ -1,16 +1,15 @@
 .sign-up{
-
-width: 500px;
-box-shadow: 0 0 3px 0 rgba(0,0,0,0.9);
-background: #ffff;
-padding: 10px;
-margin: 8% auto 0;
-text-align: center;
-border-radius: 20px;
-border-color: black;
+	width: 500px;
+	box-shadow: 0 0 3px 0 rgba(0,0,0,0.9);
+	background: #ffff;
+	padding: 10px;
+	margin: 20% auto 0;
+	text-align: center;
+	border-radius: 20px;
+	border-color: black;
 }
 h3{
-	color: blue;
+	color: #3F6699;
 }
 h6{
 	text-align: right;
@@ -31,7 +30,7 @@ h6{
 	text-align: left;
 	display: inline-block;
 	margin: 10px;
-	color: blue;
+	color: #3F6699;
 	width: 30%;
 }
 .labelBox{
@@ -42,14 +41,14 @@ h6{
 	margin: 5px;
 	padding: 10px;
 position: relative;
-	color: blue;
+	color: #3F6699;
 	width: 60%;
 }
 .labelBox1{
 	display: inline-block;
 	padding: 12px;
 	margin: 12px;
-	color: blue;
+	color: #3F6699;
 }
 .text-muted{
 	text-align: center;
@@ -62,7 +61,21 @@ position: relative;
 .signup-btn{
 	border-radius: 25px;
 	color: white;
-	background-color: blue;
+	background-color: #78C2C3;
+	display: block;
+	width: 70%;
+	text-align: center;
+	margin-left: 15%;
+	padding: 10px;
+	box-shadow: 0 0 0 7px 0 rgba(1,1,0,0.3);
+	margin-top:  10px;
+	margin-bottom: 15px;
+}
+.signup-btn:hover{
+	border-radius: 25px;
+	color: #3F6699;
+	background-color: white;
+	border-color:#78C2C3;
 	display: block;
 	width: 70%;
 	text-align: center;

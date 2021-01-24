@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import './style.css';
+import logo from './whiteLogo.png';
+
 
 class Login extends Component {
     constructor(props) {
@@ -65,8 +67,8 @@ class Login extends Component {
     render() {
         return (
 <div class="container">
-<a href = "#"><img src ="logo.png" alt ="logo"/></a>
-<h6><a href="../index.js">BACK</a></h6>
+<img src={logo} alt="Logo" className ="sideLogo" />
+<h6><a href="../index.js" className = "logOutBtn">BACK</a></h6>
 
 
             <div class = "sign-up">

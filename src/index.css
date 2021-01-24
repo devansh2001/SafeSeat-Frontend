@@ -88,6 +88,14 @@ code {
   background: #78C2C3;
 }
 
+/* Sign up */
+.sideLogo {
+  width: 150px;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  float: left;
+}
+
 /* Dashboard Professor */
 .DashboardPage {
   width: 100%;

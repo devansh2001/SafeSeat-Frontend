@@ -9,10 +9,11 @@ import DashboardProf from './components/DashboardProf';
 import DashboardStudent from './components/DashboardStudent';
 
 
+
 function App() {
   return (
     <div className="App">
-      <Main />
+      <SignUp />
     </div>
   );
 }
