@@ -14,10 +14,16 @@ class DashboardProf extends Component {
     }
 
     getOptions = () => {
+        
         const classes = this.props.userInfo.classes;
         let options = [];
-        for (let i = 0; i < classes.length; i++) {
-            options.push(<a onClick={ this.classSelected }> {classes[i][0]} </a>)
+        console.log(this.props.userInfo);
+        console.log(classes);
+        if (this.props.userInfo.classes === undefined) {
+            return options;
+        }
+        for (let i = 0; i < this.props.userInfo.classes.length; i++) {
+            options.push(<a onClick={ this.classSelected }> {this.props.userInfo.classes[i][0]} </a>)
         }
         return options;
     }

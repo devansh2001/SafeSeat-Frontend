@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import logo from './logo.png';
+import { browserHistory } from 'react-router';
 
 
 class Main extends Component {
@@ -19,10 +20,10 @@ class Main extends Component {
                     to comfortably attend in person lectures. <br></br>We can 
                     return to normalcy during a pandemic.
                 </p>
-                <Button variant="" type="submit" className="button">
+                <Button onClick={() => browserHistory.push('/login')} variant="" type="submit" className="button">
                     I am a Student
                 </Button>
-                <Button variant="" type="submit" className="button">
+                <Button onClick={() => browserHistory.push('/sign-up')} variant="" type="submit" className="button">
                     I am a Professor
                 </Button>
             </div>

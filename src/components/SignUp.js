@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Form, Button, Col } from 'react-bootstrap';
 import './style.css';
 import '../index.js';
-import './logo.png'
+import './logo.png';
+import { browserHistory } from 'react-router';
 
 class SignUp extends Component {
     constructor(props) {
@@ -12,7 +13,7 @@ class SignUp extends Component {
                 email: '',
                 password: '',
                 confirmPassword: '',
-                role: 'Student'
+                role: 'Professor'
             }
         }
     }
@@ -43,6 +44,8 @@ class SignUp extends Component {
         .catch(err => console.log(err));
 
         console.log(apiResponse);
+
+        browserHistory.push('/login');
     }
 
     onNameChange = (e) => {
@@ -146,8 +149,8 @@ class SignUp extends Component {
                                 
                                 <Form.Group controlId="formBasicCheckbox">
                                     <Form.Control as='select' onChange={this.onRoleChange}>
-                                        <option>Student</option>
                                         <option>Professor</option>
+                                        <option>Student</option>
                                     </Form.Control>
                                 </Form.Group>
                             </Form.Row>

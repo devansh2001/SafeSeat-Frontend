@@ -12,7 +12,8 @@ class ClassSeatPicker extends Component {
     }
 
     componentWillMount = async () => {
-        let URL = 'http://localhost:5000/rooms/get-current-configuration/culc-220';
+        let location = 'College of Computing-305'
+        let URL = 'http://localhost:5000/rooms/get-current-configuration/' + location;
         let headers = new Headers();
         headers.append("Access-Control-Allow-Origin", "*");
         headers.append("Access-Control-Allow-Headers", "*");
@@ -69,9 +70,9 @@ class ClassSeatPicker extends Component {
         headers.append("Content-Type", "application/json");
 
         let body = {
-            'room_id': 'culc-220',
+            'room_id': 'College of Computing-305',
             'seat_id': chosen,
-            'email': 'dev@temp.com'
+            'email': 's@gatech.edu'
         }
 
         let apiResponse = null;

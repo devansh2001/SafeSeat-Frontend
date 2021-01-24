@@ -34,7 +34,8 @@ class CreateClass extends Component {
         let body = {
             courseID: courseID,
             roomID: building + '-' + room,
-            timing: '08:00:00'
+            timing: '08:00:00',
+            email: this.props.userInfo.email
         }
         let options = {
             method: 'POST',
@@ -51,6 +52,13 @@ class CreateClass extends Component {
 
         console.log(apiResponse);
         alert('Class added at ' + building + ' ' + room + '!');
+        let userInfo = this.props.userInfo;
+        let classes = userInfo['classes'];
+        await classes.push([courseID]);
+        userInfo['classes'] = classes;
+        await this.props.updateUserInfo({
+            userInfo: userInfo
+        })
         browserHistory.push('/dashboard-professor');
     }
 

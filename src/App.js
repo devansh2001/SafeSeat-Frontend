@@ -34,21 +34,21 @@ class App extends Component {
       <div className="App">
         <Router history={browserHistory}>
           <Route path='/' component={() => <Main />} />
-          <Route path='/main-page' component={() => <Main userInfo={userInfo} />} />
+          <Route path='/main-page' component={() => <Main userInfo={this.state.userInfo} />} />
             
-          <Route path='/sign-up' component={() => <SignUp userInfo={userInfo} />} />
+          <Route path='/sign-up' component={() => <SignUp userInfo={this.state.userInfo} />} />
           
           <Route path='/login' component={() => <Login updateUserInfo={this.updateUserInfo} />} />
           
-          <Route path='/create-class' component={() => <CreateClass userInfo={userInfo} />}  />
+          <Route path='/create-class' component={() => <CreateClass updateUserInfo={this.updateUserInfo} userInfo={this.state.userInfo} />}  />
 
-          <Route path='/pick-seat' component={() => <ClassSeatPicker userInfo={userInfo} />} />
+          <Route path='/pick-seat' component={() => <ClassSeatPicker userInfo={this.state.userInfo} />}  />
 
           <Route path='/dashboard-student' component={() => <DashboardStudent userInfo={this.state.userInfo} />} />
 
           <Route path='/dashboard-professor' component={() => <DashboardProf userInfo={this.state.userInfo} />} />
           
-          <Route path='/covid' component={() => <Covid userInfo={userInfo} />} />
+          <Route path='/covid' component={() => <Covid userInfo={this.state.userInfo} />} />
           
         </Router>
       </div>
