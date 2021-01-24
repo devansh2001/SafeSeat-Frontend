@@ -1,11 +1,29 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import logo from './logo.png';
-
+import { browserHistory } from 'react-router';
 
 class DashboardProf extends Component {
     constructor(props) {
         super(props);
+        console.log(this.props.userInfo)
+    }
+
+    classSelected = () => {
+        browserHistory.push('/covid');
+    }
+
+    getOptions = () => {
+        const classes = this.props.userInfo.classes;
+        let options = [];
+        for (let i = 0; i < classes.length; i++) {
+            options.push(<a onClick={ this.classSelected }> {classes[i][0]} </a>)
+        }
+        return options;
+    }
+
+    addClass = () => {
+        browserHistory.push('/create-class');
     }
 
     render() {
@@ -13,12 +31,10 @@ class DashboardProf extends Component {
             <div class = "main" className="DashboardPage">
                 <div className="sidenav">
                     <img src={logo} alt="Logo" className ="logo" />
-                    <h2>John Doe</h2>
+                    <h2>Welcome, {this.props.userInfo.name}</h2>
                     <a href="#dashboard">Dashboard</a>
-                    <a href="#class1">CS 1101 - A</a>
-                    <a href="#class2">CS 1101 - B</a>
-                    <a href="#class3">CS 1102 - A</a>
-                    <a className="addClass">+</a>
+                    { this.getOptions() }
+                    <a onClick={this.addClass} className="addClass">+</a>
                 </div>
                 <div class = "dashboard - ID">
                     <p className="profID">ID: 1234567890</p>
@@ -28,10 +44,6 @@ class DashboardProf extends Component {
                         LOG OUT
                     </Button>
                 </div>
-                
-                    <Button variant="" type="submit" className="classBtn">
-                        I am a Student
-                    </Button>
             </div>
         );
     }
