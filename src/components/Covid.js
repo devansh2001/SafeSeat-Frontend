@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Form, Row, Container, Button } from 'react-bootstrap';
 import { browserHistory } from 'react-router';
+import './style.css';
+import logo from './whiteLogo.png';
+
+
 class Covid extends Component {
     constructor(props) {
         super(props);
@@ -41,38 +45,41 @@ class Covid extends Component {
 
     render() {
         return (
-            <div>
+            <div className="covidPage">
                 <Container>
-                    <Row>
-                        <h1>Add Your COVID Test Result</h1>
-                    </Row>
-                    <Row>
-                        <Form.Group>
-                            <Form.Label>
-                                Have you been tested for COVID in the last 7 days?
-                            </Form.Label>
-                            <Form.Control onChange={this.onTestedChange} as='select'>
-                                <option>No</option>
-                                <option>Yes</option>
-                            </Form.Control>
-                        </Form.Group>
-                    </Row>
-                    <Row>
-                        <Form.Group>
-                            <Form.Label>
-                                Please input your COVID-19 Test Result
-                            </Form.Label>
-                            <Form.Control onChange={this.onResultChange} as='select'>
-                                <option>Negative</option>
-                                <option>Positive</option>
-                            </Form.Control>
-                        </Form.Group>
-                    </Row>
-                    <Row>
-                        <Button onClick={this.buttonClick}>
-                            Submit COVID-19 Testing Information
-                        </Button>
-                    </Row>
+                    <img src={logo} alt="Logo" className ="logoCovid" />
+                    <div class="sign-up">
+                        <Row>
+                            <h2 className="covidTitle">Add Your COVID Test Result</h2>
+                        </Row>
+                        <Row>
+                            <Form.Group>
+                                <Form.Label  className= "labelCovid">
+                                    Have you been tested for COVID in the last 7 days?
+                                </Form.Label>
+                                <Form.Control onChange={this.onTestedChange} as='select'  className= "inputCovid">
+                                    <option>No</option>
+                                    <option>Yes</option>
+                                </Form.Control>
+                            </Form.Group>
+                        </Row>
+                        <Row>
+                            <Form.Group>
+                                <Form.Label  className= "labelCovid">
+                                    Please input your COVID-19 Test Result
+                                </Form.Label>
+                                <Form.Control onChange={this.onResultChange} as='select'  className= "inputCovid">
+                                    <option>Negative</option>
+                                    <option>Positive</option>
+                                </Form.Control>
+                            </Form.Group>
+                        </Row>
+                        <Row>
+                            <Button onClick={this.buttonClick}  className= "buttonCovid">
+                                Submit COVID Testing Information
+                            </Button>
+                        </Row>
+                    </div>
                 </Container>
             </div>
         )
