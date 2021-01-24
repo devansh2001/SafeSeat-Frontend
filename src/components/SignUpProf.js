@@ -10,7 +10,7 @@ class SignUp extends Component {
 
     render() {
         return (
-<div class="container"> <div className="sidenav">
+<div class="container"> <div className="sidenav1">
                     <img src={logo} alt="Logo" className ="logo1" />
                 </div>
 <h6><a href="../index.js">BACK</a></h6>

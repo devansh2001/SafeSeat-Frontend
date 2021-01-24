@@ -7,6 +7,7 @@ import SignUp from './components/SignUp';
 import Main from './components/Main';
 import CreateClass from './components/CreateClass';
 import DashboardProf from './components/DashboardProf';
+import SignUpProf from './components/SignUpProf';
 import { Router, Route, browserHistory } from 'react-router';
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
       //   <Route path='/covid' component={() => <Covid />} />
         
       // </Router>
-      <CreateClass />
+      <SignUpProf />
     </div>
   );
 }
