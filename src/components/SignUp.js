@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Col } from 'react-bootstrap';
 import './style.css';
 import '../index.js';
 import './logo.png'
@@ -12,7 +12,7 @@ class SignUp extends Component {
                 email: '',
                 password: '',
                 confirmPassword: '',
-                role: ''
+                role: 'Student'
             }
         }
     }
@@ -82,7 +82,7 @@ class SignUp extends Component {
     }
 
     onRoleChange = (e) => {
-        const role = e.target.value;
+        const role = e.currentTarget.value;
         let userInfo = this.state.userInfo;
         userInfo['role'] = role;
         this.setState({
@@ -134,14 +134,26 @@ class SignUp extends Component {
                             <Form.Control type="password" onChange={this.onConfirmPasswordChange} className="input" placeholder="Confirm Password" />
     
                         </Form.Group>
-    
-                        <Form.Group controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label = "Request ADA Access" className = "labelBox" />
+                        <Form.Row>
+                        <Form.Group className={'role-select'} controlId="formBasicCheckbox">
+                            <Form.Check type="checkbox" label = "Request ADA Access" className = "labelBox" />
                         </Form.Group>
-
-                        <Form.Group controlId="formBasicCheckbox">
-                            <Form.Check type="radio" className = "labelBox" label="Connect account with Covid Testing*" />
-                        </Form.Group>
+                        <div className='role-select'>
+                            <Form.Row>
+                                <p className='label'>Role</p>
+                            </Form.Row>
+                            <Form.Row>
+                                
+                                <Form.Group controlId="formBasicCheckbox">
+                                    <Form.Control as='select' onChange={this.onRoleChange}>
+                                        <option>Student</option>
+                                        <option>Professor</option>
+                                    </Form.Control>
+                                </Form.Group>
+                            </Form.Row>
+                        </div>
+                        </Form.Row>
+                        
                         
                     </Form>
                     <Button variant="primary" onClick={this.signUpClick} className = "signup-btn">

@@ -182,3 +182,8 @@ code {
   font-size: 40px !important;
   box-shadow: 0px 0px 8px rgba(184, 181, 181, 0.12), 0px 8px 8px rgba(170, 168, 168, 0.24);
 }
+
+.role-select {
+  color: #0D1B4C;
+  margin-left: 30px;
+}
