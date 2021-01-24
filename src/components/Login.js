@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import './style.css';
 import { browserHistory } from 'react-router';
+import logo from './whiteLogo.png';
 
 class Login extends Component {
     constructor(props) {
@@ -66,7 +67,9 @@ class Login extends Component {
     render() {
         return (
 <div class="container">
-<a href = "#"><img src ="logo.png" alt ="logo"/></a>
+ <div className="sidenav">
+                    <img src={logo} alt="Logo" className ="logo1" />
+                </div>
 <h6><a href="../index.js">BACK</a></h6>
 
 
