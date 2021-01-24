@@ -48,7 +48,7 @@ class DashboardStudent extends Component {
                         <Col>
                             <div className="sidenav">
                                 <img src={logo} alt="Logo" className ="logo" />
-                                <h2>John Doe</h2>
+                                <h2>Welcome, {this.props.userInfo.name}</h2>
                                 <a href="#dashboard">Dashboard</a>
                                 { this.getOptions() }
                                 <a className="addClass">+</a>
