@@ -19,11 +19,11 @@ class DashboardStudent extends Component {
         
         for (let i = 0; i < classes.length; i++) {
             classInfo.push(
-                <Card onClick = { this.classSelected } style={{ width: '18rem' }}>
+                <Card className='my-card' onClick = { this.classSelected } style={{ width: '18rem' }}>
                     <Card.Body>
                         <Card.Title>{ classes[i][0] }</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">{ times[i] }</Card.Subtitle>
-                        <Button>Select Seats</Button>
+                        <Button className='buttonCovidSmall'>Select Seats</Button>
                     </Card.Body>
                 </Card>
             )

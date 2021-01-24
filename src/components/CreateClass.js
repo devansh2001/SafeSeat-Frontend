@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Container, Form, Row, Col, Button } from 'react-bootstrap';
+
 import { browserHistory } from 'react-router';
+
+import logo from './logo.png';
+
 
 class CreateClass extends Component {
     constructor(props) {
@@ -140,16 +144,28 @@ class CreateClass extends Component {
 
     render() {
         return (
+            <div class="create-class">
             <Container>
+            <div className="sidenav">
+                    <img src={logo} alt="Logo" className ="logo" />
+                    <h2>John Doe</h2>
+                    <a href="#dashboard">Dashboard</a>
+                    <a href="#class1">CS 1101 - A</a>
+                    <a href="#class2">CS 1101 - B</a>
+                    <a href="#class3">CS 1102 - A</a>
+                    <a className="addClass">+</a>
+                </div>
+                
+
                 <Form>
                     <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Course ID</Form.Label>
+                        <Form.Label className="label1">Course ID: *</Form.Label>
                         <Form.Control onChange={this.onCourseIDChange} type="text" placeholder="Course ID (ex. CS 101)" />
                     </Form.Group>
                     <Form.Row>
                         <Col>
                             <Form.Group controlId="exampleForm.ControlSelect1">
-                                <Form.Label>Select Building</Form.Label>
+                                <Form.Label className="label1">Select Building: *</Form.Label>
                                 <Form.Control onChange={this.onBuildingChange} as="select">
                                     <option>Clough Undergraduate Learning Commons</option>
                                     <option>College of Computing</option>
@@ -159,7 +175,7 @@ class CreateClass extends Component {
                         </Col>
                         <Col>
                             <Form.Group controlId="exampleForm.ControlSelect1">
-                                <Form.Label>Select Room</Form.Label>
+                                <Form.Label className="label1">Select Room: *</Form.Label>
                                 <Form.Control onChange={this.onRoomChange} as="select">
                                     <option>101</option>
                                     <option>220</option>
@@ -172,22 +188,23 @@ class CreateClass extends Component {
                     <Form.Row>
                         <Col>
                             <Form.Group controlId="formBasicPassword">
-                                <Form.Label>Number of Rows</Form.Label>
+                                <Form.Label className="label1">Number of Rows: *</Form.Label>
                                 <Form.Control onChange={this.onRowsChange} value={this.state.length} type="text" placeholder="10" />
                             </Form.Group>
                         </Col>
                         <Col>
                             <Form.Group controlId="formBasicPassword">
-                                <Form.Label>Number of Seats/Row</Form.Label>
+                                <Form.Label className="label1">Number of Seats: *</Form.Label>
                                 <Form.Control onChange={this.onColsChange} value={this.state.breadth} type="text" placeholder="20" />
                             </Form.Group>
                         </Col>
                     </Form.Row>
                 </Form>
-                <Button onClick={this.addClass} >
+                <Button onClick={this.addClass} className="signup-btn">
                     Add Class
                 </Button>
             </Container>
+            </div>
         )
     }
 }

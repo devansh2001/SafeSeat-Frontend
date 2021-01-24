@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import SeatPicker from 'react-seat-picker';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import logo from './logo.png';
+
 class ClassSeatPicker extends Component {
     constructor(props) {
         super(props);
@@ -43,7 +45,7 @@ class ClassSeatPicker extends Component {
         }, async () => {
           await new Promise(resolve => setTimeout(resolve, 1500))
           console.log(`Added seat ${number}, row ${row}, id ${id}`)
-          addCb(row, number, id, '')
+          addCb(row, number, id, 'Selected')
           this.setState({ loading: false, selectedSeatId: id })
         })
       }
@@ -85,21 +87,33 @@ class ClassSeatPicker extends Component {
         .then(data => apiResponse = data)
         .catch(err => console.log(err));
         console.log(apiResponse);
+
+        alert('Your seat has been booked! Please arrive at 12:20 PM :)')
     }
 
     render() {
         const loading = this.state.loading
         return (
             <div>
+                <div className="sidenav">
+                    <img src={logo} alt="Logo" className ="logo" />
+                    <h2>John Doe</h2>
+                    <a href="#dashboard">Dashboard</a>
+                    <a href="#class1">CS 4641</a>
+                    <a href="#class2">MATH 3012</a>
+                    <a href="#class3">CS 4660</a>
+                    <a className="addClass">+</a>
+                </div>
                 <Container>
                     <Row>
-                        <Col>
-                            <h2>Please select a seat</h2>
+                        <Col className='seat-title'>
+                            <h2>CS-4641</h2>
                         </Col>
                     </Row>
                 </Container>
                 <div className='my-seat'>
                 <SeatPicker
+                    className='seat-picker'
                     addSeatCallback={this.addSeatCallback}
                     removeSeatCallback={this.removeSeatCallback}
                     maxReservableSeats={1}
@@ -113,8 +127,8 @@ class ClassSeatPicker extends Component {
                 </div>
                 <Container>
                     <Row>
-                        <Col>
-                            <Button onClick={this.chooseSeat}>
+                        <Col className='seat-title' >
+                            <Button onClick={this.chooseSeat} className='buttonCovid'>
                                 Confirm
                             </Button>
                         </Col>

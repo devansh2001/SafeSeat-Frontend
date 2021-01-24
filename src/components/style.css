@@ -10,7 +10,7 @@ border-radius: 20px;
 border-color: black;
 }
 h3{
-	color: blue;
+	color: #0D1B4C;
 }
 h6{
 	text-align: right;
@@ -31,8 +31,17 @@ h6{
 	text-align: left;
 	display: inline-block;
 	margin: 10px;
-	color: blue;
+	color: #0D1B4C;
 	width: 30%;
+}
+.label1{
+	text-align: left;
+	float:left;
+	clear:both;
+	display: inline-block;
+	margin: 10px;
+	color: #0D1B4C;
+	width: 250px;
 }
 .labelBox{
 	text-align: left;
@@ -42,14 +51,14 @@ h6{
 	margin: 5px;
 	padding: 10px;
 position: relative;
-	color: blue;
+	color:  #0D1B4C;
 	width: 60%;
 }
 .labelBox1{
 	display: inline-block;
 	padding: 12px;
 	margin: 12px;
-	color: blue;
+	color:  #0D1B4C;
 }
 .text-muted{
 	text-align: center;
@@ -62,7 +71,7 @@ position: relative;
 .signup-btn{
 	border-radius: 25px;
 	color: white;
-	background-color: blue;
+	background-color:  #0D1B4C;
 	display: block;
 	width: 70%;
 	text-align: center;
@@ -71,4 +80,94 @@ position: relative;
 	box-shadow: 0 0 0 7px 0 rgba(1,1,0,0.3);
 	margin-top:  10px;
 	margin-bottom: 15px;
+}
+
+.inputCovid{
+	margin: 10px;
+	width: 150px;
+	border-radius: 20px;
+	display: inline-block;
+	float: right;
+}
+
+.labelCovid{
+	text-align: left;
+	display: inline-block;
+	margin: 10px;
+	margin-left: 30px;
+	margin-right: 60px;
+	color: #0D1B4C;
+	width: 200px;
+}
+
+
+
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0D1B4C;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav h2 {
+  color: #FFFEFE;
+  margin-bottom: 50px;
+}
+
+.sidenav a {
+  padding: 10px 8px 10px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  background-color: rgba(196, 196, 196, 0.12);
+  border-top: #FFFEFE;
+  border-style: solid none solid none;
+  border-width: 0.5px;
+}
+
+.sidenav a:hover {
+  color: #78C2C3;
+  font-size: 25px;
+}
+
+.logo {
+  width: 200px;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+.logo1{
+  width: 150px;
+  margin-top: 5%;
+  margin-bottom: 2%;
+
+}
+.create-class{
+	width: 500px;
+box-shadow: 0 0 3px 0 rgba(0,0,0,0.9);
+background: #ffff;
+padding: 10px;
+margin: 8% auto 0;
+text-align: center;
+margin-top: 15%;
+margin-left: 35%;
+border-radius: 20px;
+border-color: black;
+}
+
+.sidenav1{
+	  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 20px;
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import './style.css';
+import logo from './whiteLogo.png';
 
 class SignUp extends Component {
     constructor(props) {
@@ -9,23 +10,20 @@ class SignUp extends Component {
 
     render() {
         return (
-<div class="container"><h6><a href="#/index">BACK</a></h6>
-
+<div class="container"> <div className="sidenav1">
+                    <img src={logo} alt="Logo" className ="logo1" />
+                </div>
+<h6><a href="../index.js">BACK</a></h6>
 
             <div class = "sign-up">
                 <h3>Sign Up with Safe Seat</h3>
-
-
-
-            <hr  style={{
+                <hr  style={{
                 color: 'blue',
                 backgroundColor: '#000000',
                 height: .9,
                 borderColor : '#000000'
             }}/>
-
-
-                <Form>
+            <Form>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label className= "label">Name: *</Form.Label>
                         <Form.Control type="text" className="input" placeholder="Name" />

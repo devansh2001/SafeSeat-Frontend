@@ -19,11 +19,33 @@ code {
   flex-direction: row;
   justify-content: center;
 }
+.my-card {
+  border-color: #0D1B4C;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50px; 
+  background: linear-gradient(180deg, rgba(120, 194, 195, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
+  box-sizing: border-box;
+  color: #3F6699;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  vertical-align: middle !important;
+  margin: 3%;
+  
+}
 
 .my-seat {
-  padding-left: 50px;
+  margin-left: 270px;
   margin-bottom: 20px;
   margin-top: 20px;
+  text-align:center;
+}
+
+.seat-title {
+  margin-left: 250px !important;
+  text-align:center;
+  margin-top: 5% !important;
 }
 
 /* Main Page*/
@@ -186,4 +208,67 @@ code {
 .role-select {
   color: #0D1B4C;
   margin-left: 30px;
+}
+
+/* Covid Page */
+.covidTitle {
+  color: #0D1B4C;
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+.buttonCovid {
+  width: 400px;
+  height: 75px;
+  left: 146px;
+  top: 644px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background: #0D1B4C;
+  border-radius: 50px;
+  color: #FFFEFE;
+  font-size: 20px;
+  margin: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: none;
+}
+
+.buttonCovid:hover {
+  filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.459));
+  background: #78C2C3;
+}
+
+
+.buttonCovidSmall {
+  width: 150px;
+  height: 50px;
+  left: 100px;
+  top: 644px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background: #0D1B4C;
+  border-radius: 50px;
+  color: #FFFEFE;
+  font-size: 20px;
+  margin: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: none;
+}
+
+.buttonCovidSmall:hover {
+  filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.459));
+  background: #78C2C3;
+}
+
+.logoCovid {
+  width: 150px;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  float: left;
+}
+
+.covidPage {
+  margin-top: 5%;
 }

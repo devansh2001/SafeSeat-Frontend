@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Form, Button, Col } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 import './style.css';
 import '../index.js';
 import './logo.png';
 import { browserHistory } from 'react-router';
+import logo from './whiteLogo.png'
 
 class SignUp extends Component {
     constructor(props) {
@@ -85,7 +86,7 @@ class SignUp extends Component {
     }
 
     onRoleChange = (e) => {
-        const role = e.currentTarget.value;
+        const role = e.target.value;
         let userInfo = this.state.userInfo;
         userInfo['role'] = role;
         this.setState({
@@ -99,8 +100,10 @@ class SignUp extends Component {
     render() {
         return (
             <div class="container">
-            <a href = "#"><img src ="logo.png" alt ="logo"/></a>
-            <h6><a href="../index.js">BACK</a></h6>
+ <div className="sidenav1">
+                    <img src={logo} alt="Logo" className ="logo1" />
+                </div>
+<h6><a href="../index.js">BACK</a></h6>
 
 
                 <div class = "sign-up">
@@ -137,27 +140,30 @@ class SignUp extends Component {
                             <Form.Control type="password" onChange={this.onConfirmPasswordChange} className="input" placeholder="Confirm Password" />
     
                         </Form.Group>
-                        <Form.Row>
-                        <Form.Group className={'role-select'} controlId="formBasicCheckbox">
-                            <Form.Check type="checkbox" label = "Request ADA Access" className = "labelBox" />
+    
+                        <Form.Group controlId="formBasicCheckbox">
+                        <Form.Check type="checkbox" label = "Request ADA Access" className = "labelBox" />
                         </Form.Group>
-                        <div className='role-select'>
-                            <Form.Row>
-                                <p className='label'>Role</p>
-                            </Form.Row>
-                            <Form.Row>
-                                
-                                <Form.Group controlId="formBasicCheckbox">
-                                    <Form.Control as='select' onChange={this.onRoleChange}>
-                                        <option>Professor</option>
-                                        <option>Student</option>
-                                    </Form.Control>
-                                </Form.Group>
-                            </Form.Row>
-                        </div>
+
+                        <Form.Group controlId="formBasicCheckbox">
+                            <Form.Check type="radio" className = "labelBox" label="Connect account with Covid Testing*" />
+                        </Form.Group>
+                        <Form.Row>
+                            <div className='role-select'>
+                                <Form.Row>
+                                    <p className='label'>Role</p>
+                                </Form.Row>
+                                <Form.Row>
+                                    
+                                    <Form.Group controlId="formBasicCheckbox">
+                                        <Form.Control as='select' onChange={this.onRoleChange}>
+                                            <option>Professor</option>
+                                            <option>Student</option>
+                                        </Form.Control>
+                                    </Form.Group>
+                                </Form.Row>
+                            </div>
                         </Form.Row>
-                        
-                        
                     </Form>
                     <Button variant="primary" onClick={this.signUpClick} className = "signup-btn">
                         Submit!

@@ -7,7 +7,9 @@ import SignUp from './components/SignUp';
 import Main from './components/Main';
 import CreateClass from './components/CreateClass';
 import DashboardProf from './components/DashboardProf';
+
 import DashboardStudent from './components/DashboardStudent';
+import SignUpProf from './components/SignUpProf';
 import { Router, Route, browserHistory } from 'react-router';
 import { Component } from 'react';
 
@@ -54,6 +56,7 @@ class App extends Component {
       </div>
     );
   }
+
 }
 
 export default App;
