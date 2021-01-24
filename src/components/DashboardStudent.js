@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import logo from './logo.png';
 
 
-class DashboardProf extends Component {
+class DashboardStudent extends Component {
     constructor(props) {
         super(props);
     }
@@ -21,14 +21,13 @@ class DashboardProf extends Component {
                     <a className="addClass">+</a>
                 </div>
                 <div>
-                    <p className="profID">ID: 1234567890</p>
                     <Button variant="" type="submit" className="logOutBtn">
                         LOG OUT
                     </Button>
                 </div>
                 <div className = "dashboard">
-                    <h2>Hello Professor John Doe,</h2>
-                    <h5>Below are the classes you are hosting in person</h5>
+                    <h2>Hello John Doe,</h2>
+                    <h5>Below are the classes you are signed up to</h5>
                     <div href="#class1">
                         <h5>CS 1101<br></br> SECTION A</h5>
                         <p>10:00 am - 10:45 am <br></br> 67% Full</p>
@@ -48,4 +47,4 @@ class DashboardProf extends Component {
     }
 }
 
-export default DashboardProf;
+export default DashboardStudent;
